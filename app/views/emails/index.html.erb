@@ -1,0 +1,28 @@
+<% if notice.present? %>
+  <p class="py-2 mt-2 w-25 rounded-pill bg-success bg-opacity-50 text-center">
+    <%= notice %>
+  </p>
+<% end %>
+
+<h1>Tous les emails</h1>
+
+<div class="mt-2">
+  <%= render "button", email: @email %>
+</div>
+<div class="row">
+  <div id="emails" class="ps-4 col-5">
+    <h4 class="mt-2">Emails</h4>
+    <tr>
+      <th>Lu</th>
+      <th class="mx-5">Objet</th>
+    </tr>
+
+    <div class="" data-controller="emails">
+      <%= render @emails %>
+    </div>
+  </div>
+  <div class="col-7">
+    <%= turbo_frame_tag "email" do %>
+    <% end %>
+  </div>
+</div>

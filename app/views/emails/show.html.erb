@@ -1,0 +1,7 @@
+<turbo-frame id="email">
+  <h1><%= @email.object %></h1>
+
+  <p><%= @email.content %></p>
+
+  <%= button_to "Supprimer", @email, method: :delete, data: { turbo_frame: "_top" }, class:"btn btn-danger" %>
+</turbo-frame>
